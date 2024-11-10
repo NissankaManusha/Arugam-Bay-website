@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arugam Bay - Sri Lanka's Surfing Paradise</title>
+    <!-- Add Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#f59e0b',
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans antialiased;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                @apply font-bold;
+            }
+        }
+        @layer components {
+            .nav-link {
+                @apply px-4 py-2 text-gray-700 hover:text-primary transition-colors;
+            }
+            .btn-primary {
+                @apply px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors;
+            }
+            .section-title {
+                @apply text-3xl font-bold text-center mb-8;
+            }
+            .card {
+                @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-primary">Arugam Bay</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#discover" class="nav-link">Discover</a>
+                    <a href="#activities" class="nav-link">Activities</a>
+                    <a href="#news" class="nav-link">News</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen">
+        <div class="absolute inset-0">
+            <img src="/api/placeholder/1920/1080" alt="Arugam Bay" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        <div class="relative h-full flex items-center justify-center text-center text-white px-4">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Arugam Bay</h1>
+                <p class="text-xl md:text-2xl mb-8">Sri Lanka's Surfing Paradise</p>
+                <a href="#discover" class="btn-primary">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Section -->
+    <section id="discover" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="section-title">Discover Arugam Bay</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-gray-600 leading-relaxed">
+                        Located on Sri Lanka's stunning southeast coast, Arugam Bay is renowned for its relaxed vibe, 
+                        scenic beaches, and world-class surfing. This charming coastal town attracts surfers, backpackers, 
+                        and beach lovers alike.
+                    </p>
+                    <a href="#activities" class="inline-block btn-primary">View Activities</a>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="/api/placeholder/800/600" alt="Arugam Bay Landscape" class="w-full h-full object-cover"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="section-title">Things to Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Surfing -->
+                <div class="card">
+                    <div class="mb-4">
+                        <img src="/api/placeholder/400/300" alt="Surfing" class="w-full h-48 object-cover rounded"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Surfing</h3>
+                    <p class="text-gray-600">Known as one of Asia's premier surf destinations, featuring world-class breaks for all skill levels.</p>
+                </div>
+                <!-- Wildlife -->
+                <div class="card">
+                    <div class="mb-4">
+                        <img src="/api/placeholder/400/300" alt="Wildlife" class="w-full h-48 object-cover rounded"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Wildlife Safaris</h3>
+                    <p class="text-gray-600">Explore Kumana National Park and spot elephants, leopards, and diverse bird species.</p>
+                </div>
+                <!-- Cultural -->
+                <div class="card">
+                    <div class="mb-4">
+                        <img src="/api/placeholder/400/300" alt="Cultural Sites" class="w-full h-48 object-cover rounded"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cultural Sites</h3>
+                    <p class="text-gray-600">Visit ancient temples and landmarks like Muhudu Maha Viharaya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <p>
+                            <span class="font-bold">Email:</span>
+                            <a href="mailto:info@arugambay.com" class="text-primary">info@arugambay.com</a>
+                        </p>
+                        <p>
+                            <span class="font-bold">Phone:</span>
+                            <a href="tel:+94123456789" class="text-primary">+94 123 456 789</a>
+                        </p>
+                        <p>
+                            <span class="font-bold">Location:</span><br/>
+                            Arugam Bay, Eastern Province, Sri Lanka
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary hover:text-blue-700">Facebook</a>
+                        <a href="#" class="text-primary hover:text-blue-700">Instagram</a>
+                        <a href="#" class="text-primary hover:text-blue-700">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Arugam Bay. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
